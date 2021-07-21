@@ -1,0 +1,11 @@
+import 'babel-polyfill';
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Container from './components/Container';
+import "./styles.scss";
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-172434204-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
+ReactDOM.render(<Container />, document.getElementById('main'));
